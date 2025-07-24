@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://damryw43uwaec"]
-
-[ext_resource type="Texture2D" uid="uid://lwgxvvgwol1p" path="res://img/ragnaros.png" id="1_tc6vp"]
-
-[node name="Node3D" type="Node3D"]
-
-[node name="Sprite3D" type="Sprite3D" parent="."]
-texture = ExtResource("1_tc6vp")
