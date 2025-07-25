@@ -1,9 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://ba7v12rcdofgs"]
+[gd_scene load_steps=4 format=3 uid="uid://ba7v12rcdofgs"]
 
 [ext_resource type="Script" uid="uid://ttygjpo7irm5" path="res://scripts/CardManager.gd" id="1_w26ui"]
 [ext_resource type="PackedScene" uid="uid://dvdn1ghjvtov8" path="res://Hand.tscn" id="1_xeia0"]
+[ext_resource type="PackedScene" uid="uid://b1i4pvhq60vdx" path="res://Deck.tscn" id="3_mr0nh"]
 
-[node name="CardManager" type="Node2D"]
+[node name="CardManager" type="Node2D" node_paths=PackedStringArray("hand", "deck")]
 script = ExtResource("1_w26ui")
+hand = NodePath("Hand")
+deck = NodePath("Deck")
 
 [node name="Hand" parent="." instance=ExtResource("1_xeia0")]
+position = Vector2(588, 635)
+
+[node name="Deck" parent="." instance=ExtResource("3_mr0nh")]
+position = Vector2(1323, 779)
+
+[node name="Button" parent="Deck" index="1"]
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Deck/Button" to="." method="_on_button_pressed"]
+
+[editable path="Deck"]

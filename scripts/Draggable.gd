@@ -32,7 +32,6 @@ func _ready():
 	card_node.global_position.y = new_pos
 
 func _unhandled_input(event):
-	print(parent.can_be_dragged)
 	if event is InputEventMouseButton && event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed && parent.can_be_dragged:
 			if get_global_rect().has_point(get_global_mouse_position()):
