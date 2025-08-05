@@ -1,10 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dvdn1ghjvtov8"]
+[gd_scene load_steps=2 format=3 uid="uid://dvdn1ghjvtov8"]
 
 [ext_resource type="Script" uid="uid://gjmh84sf1681" path="res://scripts/Hand.gd" id="1_d3vym"]
-[ext_resource type="PackedScene" uid="uid://cyxbt6tyu4bii" path="res://Card.tscn" id="1_wk3ks"]
 
 [node name="Hand" type="Node2D"]
 script = ExtResource("1_d3vym")
-
-[node name="Card" parent="." instance=ExtResource("1_wk3ks")]
-position = Vector2(-6, -85)

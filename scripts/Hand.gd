@@ -21,10 +21,10 @@ func _calculate_hand_positions():
 		var card = cards_in_hand[i]
 		print(hand_positions[i].position, hand_positions[i].rotation)
 		"""
-		card.card_node.global_position.x = hand_positions[i].position.x
-		card.card_node.global_position.y = hand_positions[i].position.y
+		card.global_position.x = hand_positions[i].position.x
+		card.global_position.y = hand_positions[i].position.y
 		"""
-		card.card_node.global_rotation.z = hand_positions[i].rotation
+		card.global_rotation = hand_positions[i].rotation
 
 func _add_card(card: Node2D):
 	if cards_in_hand.size() < maximum_hand_size:

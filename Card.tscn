@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://cyxbt6tyu4bii"]
+[gd_scene load_steps=6 format=3 uid="uid://cyxbt6tyu4bii"]
 
 [ext_resource type="Script" uid="uid://dpqq13vjlih41" path="res://scripts/Card.gd" id="1_hael8"]
-[ext_resource type="Script" uid="uid://b4mglfh2nx6g3" path="res://scripts/Draggable.gd" id="2_3ujke"]
 [ext_resource type="Texture2D" uid="uid://lwgxvvgwol1p" path="res://img/ragnaros.png" id="2_21rx5"]
 [ext_resource type="Script" uid="uid://d4ku0qbun8ph8" path="res://scripts/CardNode.gd" id="4_3ujke"]
 [ext_resource type="Texture2D" uid="uid://clxfsb1rg7vmb" path="res://img/card_back.png" id="5_wi8ie"]
@@ -9,15 +8,11 @@
 [sub_resource type="ViewportTexture" id="ViewportTexture_s0tg5"]
 viewport_path = NodePath("Draggable/SubViewport")
 
-[node name="Card" type="Node2D" node_paths=PackedStringArray("card_node")]
+[node name="Card" type="Node2D" node_paths=PackedStringArray("_3d_model")]
 script = ExtResource("1_hael8")
-card_node = NodePath("Draggable/SubViewport/Node3D")
+_3d_model = NodePath("Draggable/SubViewport/Node3D")
 
-[node name="Draggable" type="Node2D" parent="." node_paths=PackedStringArray("parent", "camera_node", "card_node")]
-script = ExtResource("2_3ujke")
-parent = NodePath("..")
-camera_node = NodePath("SubViewport/Camera3D")
-card_node = NodePath("SubViewport/Node3D")
+[node name="Draggable" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Draggable"]
 scale = Vector2(0.5, 0.5)
